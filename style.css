@@ -1,0 +1,58 @@
+h2, p{
+    color:black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 970px;
+    margin: auto;
+    background-color: white;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+
+li{
+    margin: 20px 0px;
+}
+
+h2{
+    margin-bottom: 5px;
+}
+
+button, p{
+    display:inline-block;
+    vertical-align: top;
+}
+
+button{
+    width: 100px;
+    margin: 0px 100px 0px 0px;
+}
+
+p{
+    width: 720px;
+    text-align: left;
+}
+
+.first-item{
+    border-bottom: 2.5px solid black;
+}
+
+.middle-item{
+    border-bottom: 2.5px solid black;
+}
+
+.red{
+    color: red;
+}
+
+img{
+    display: block;
+    width: 600px;
+    height: 400px;
+    margin: 10px auto;
+}
