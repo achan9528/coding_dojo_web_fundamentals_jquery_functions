@@ -16,6 +16,57 @@
             $(".append").click(function(){
                 $(this).siblings("p").append("<p>This is an appended message!<p>");
             });
+            $(".click").click(function(){
+                alert("You clicked the button!");
+            });
+            $(".hide").click(function(){
+                $(this).siblings("p").hide("slow");
+            });
+            $(".show").click(function(){
+                $(".hide").siblings("p").show("slow");
+                // $("#test").show("slow");
+            });
+            $(".toggle").click(function(){
+                $(this).siblings("p").toggle("slow");
+            });
+            $(".slideDown").click(function(){
+                $(this).siblings("img").slideDown("slow");
+            });
+            $(".slideUp").click(function(){
+                $(".slideDown").siblings("img").slideUp("slow");
+            });
+            $(".fadeIn").click(function(){
+                $(".fadeIn").siblings("img").fadeIn("slow");
+            });
+            $(".fadeOut").click(function(){
+                $(".fadeIn").siblings("img").fadeOut("slow");
+            });
+            $(".before").click(function(){
+                $(".before").siblings("p").before("<p>You inserted\
+                    this text!</p>");
+            });
+            $(".after").click(function(){
+                $(".after").siblings("p").after("<p>You inserted\
+                    this text!<p>");
+            });
+            $(".html").click(function(){
+                var htmlString = $(".html").siblings("p").html();
+                console.log(htmlString);
+                $(".html").siblings("p").text(htmlString);
+            });
+            $(".attr").click(function(){
+                var attribute = $(".attr").siblings("p").value("id");
+                alert("The id for the p tag is: " + attribute);
+            });
+            $(".value").click(function(){
+                var val = $(".value").siblings("p").val();
+                alert("The value for the p tag is: " + val);
+            });
+            $(".text").click(function(){
+                var val = $(".text").siblings("p").text();
+                alert("The text for the p tag is: " + val);
+            });
+            
         });
     </script>
     <title>My jQuery basic assignment!</title>
@@ -37,94 +88,84 @@
                 <img src = "./images/semi-pro.jpg">
             </li>
             <li class="middle-item">
-                <h2 class="append">Append</h2>
-                <button>Append</button>
+                <h2>Append</h2>
+                <button class="append"> Append</button>
                 <p class="">Click the button to append a new 
                     paragraph!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>Click</h2>
+                <button class="click">Click</button>
+                <p>Click the button to see what happens!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>Hide</h2>
+                <button class="hide">Hide</button>
+                <p id="test">Click the button to hide something!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2 class="">Show</h2>
+                <button class="show">Show</button>
+                <p>Click the button to show it again!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>Toggle</h2>
+                <button class="toggle">Toggle</button>
+                <p>Click the button to toggle the
+                    paragraph!
+                </p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>SlideDown</h2>
+                <button class="slideDown">SlideDown</button>
+                <p>Click the button to slide the image down!</p>
+                <img class="hidden" src = "./images/semi-pro.jpg">
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>SlideUp</h2>
+                <button class="slideUp">Append</button>
+                <p>Click the button to slide the image up!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2 class="">fadeIn</h2>
+                <button class="fadeIn">fadeIn</button>
+                <p>Click the button to fade the image in!</p>
+                <img class="hidden" src = "./images/semi-pro.jpg">
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>fadeOut</h2>
+                <button  class="fadeOut">fadeOut</button>
+                <p>Click the button to fade the image out!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>Before</h2>
+                <button class="before">Before</button>
+                <p>Click the button to insert a new paragraph!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>After</h2>
+                <button class="after">After</button>
+                <p>Click the button to insert a new paragraph!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>HTML</h2>
+                <button class="html">HTML</button>
+                <p>Click to get the contents of the HTML!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>Attr</h2>
+                <button class="attr">Attr</button>
+                <p id="test">Click to get the charset attribute!</p>
             </li>
             <li class="middle-item">
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>Value</h2>
+                <button class="value">Value</button>
+                <p>Click the button to get the value!</p>
             </li>
             <li>
-                <h2 class="">Append</h2>
-                <button>Append</button>
-                <p class="">Click the button to append a new 
-                    paragraph!</p>
+                <h2>Text</h2>
+                <button class="text">Text</button>
+                <p>Click the button to get the text!</p>
             </li>
         </ul>
     </div>
